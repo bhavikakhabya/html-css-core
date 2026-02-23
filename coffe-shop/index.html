@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Charm</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f8f5f2;
+            --primary: #3e2723;
+            --accent: #a47551;
+            --light: #ffffff;
+            --text: #2c2c2c;
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: var(--light);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 85vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+        }
+
+        /* SECTION */
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* TWO COLUMN */
+
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .two-col h2 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .special-list {
+            list-style: none;
+        }
+
+        .special-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* MENU GRID */
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .menu-card ul {
+            list-style: none;
+        }
+
+        .menu-card li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">☕ Cafe Charm</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience the Perfect Brew</h1>
+            <p>Artisan coffee, roasted with love and served with warmth.</p>
+            <a href="#" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <section class="two-col">
+            <div>
+                <h2>Our Story</h2>
+                <p>
+                    Cafe Charm is a cozy retreat for coffee lovers.
+                    We ethically source our beans and craft each cup with precision,
+                    bringing you flavors that comfort and inspire.
+                </p>
+            </div>
+
+            <div>
+                <h2>Why Choose Us?</h2>
+                <ul class="special-list">
+                    <li>✦ Award-Winning Baristas</li>
+                    <li>✦ 100% Organic Beans</li>
+                    <li>✦ Warm & WiFi-Friendly Ambience</li>
+                </ul>
+            </div>
+        </section>
+
+        <h2 class="section-title">Daily Favorites</h2>
+
+        <section class="menu-grid">
+
+            <div class="menu-card">
+                <div class="card-icon">☕</div>
+                <h3>Coffee</h3>
+                <ul>
+                    <li><span>Latte</span><span>₹300</span></li>
+                    <li><span>Cappuccino</span><span>₹400</span></li>
+                    <li><span>Americano</span><span>₹200</span></li>
+                    <li><span>Espresso</span><span>₹150</span></li>
+                </ul>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-icon">🍵</div>
+                <h3>Tea Selections</h3>
+                <ul>
+                    <li><span>Green Tea</span><span>₹130</span></li>
+                    <li><span>Earl Grey</span><span>₹350</span></li>
+                    <li><span>Herbal Infusion</span><span>₹200</span></li>
+                    <li><span>Masala Chai</span><span>₹50</span></li>
+                </ul>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-icon">🥐</div>
+                <h3>Fresh Pastries</h3>
+                <ul>
+                    <li><span>Butter Croissant</span><span>₹150</span></li>
+                    <li><span>Blueberry Muffin</span><span>₹200</span></li>
+                    <li><span>Fudge Brownie</span><span>₹100</span></li>
+                    <li><span>Cinnamon Roll</span><span>₹250</span></li>
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Cafe Charm • Brewed with Passion</p>
+    </footer>
+
+</body>
+
+</html>
