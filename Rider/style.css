@@ -1,0 +1,222 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f0fbff;
+color:#003344;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:linear-gradient(to right,#023047,#035e7b);
+padding:15px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#7dd3fc;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+nav ul li{
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#7dd3fc;
+}
+
+nav button{
+background:none;
+border:none;
+font-size:20px;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.overlay{
+background:rgba(0,0,0,.4);
+padding:60px;
+text-align:center;
+color:white;
+border-radius:20px;
+backdrop-filter:blur(8px);
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.overlay h1{
+font-size:50px;
+}
+
+.overlay button{
+margin-top:20px;
+padding:15px 40px;
+border:none;
+border-radius:30px;
+background:#00b4d8;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.overlay button:hover{
+background:#48cae4;
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+.about, .courses, .gallery, .contact{
+padding:100px 10%;
+text-align:center;
+}
+
+.about h2, .courses h2, .gallery h2, .contact h2{
+font-size:40px;
+color:#023047;
+margin-bottom:25px;
+}
+
+.about p{
+max-width:900px;
+margin:10px auto;
+line-height:1.8;
+}
+
+/* COURSES */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-15px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+margin:15px;
+color:#035e7b;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+/* GALLERY */
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.08);
+}
+
+/* CONTACT */
+.contact-box{
+background:white;
+max-width:600px;
+margin:0 auto;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.contact-box p{
+margin:20px 0;
+font-size:16px;
+line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+background:#023047;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* DARK MODE */
+.dark{
+background:#021b2d;
+color:white;
+}
+
+.dark nav,
+.dark footer{
+background:#010f1a;
+}
+
+.dark .card,
+.dark .contact-box{
+background:#012a3f;
+color:white;
+}
+
+
